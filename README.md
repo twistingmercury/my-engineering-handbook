@@ -1,4 +1,4 @@
-# IT Team: How We Operate
+# How We Operate
 
 > **Maturity Level**: Basic - Core engineering principles and practices are
 > drafted, but still need refinement and testing.
