@@ -90,4 +90,4 @@ the `CD` side of the equation.
 
 ### Hosting
 
-You can't talk about deployments without talking briefly about hosting. Our ideal is Kubernetes. We do NOT want to use virtual machines, or even PaaS services like Azure App Services, or AWS Elastic Beanstalk. We may have some older software deployed on these platforms, but we shouldn't target these hosting options for new apps and services. Containers is the word!
+You can't talk about deployments without talking briefly about hosting. Our ideal is Kubernetes. We do NOT want to use virtual machines. We also avoid using PaaS services like Azure App Services, or AWS Elastic Beanstalk, though there will be exceptions. We may have some older software deployed on these platforms, but we shouldn't target these hosting options for new apps and services. Containers is the word!
