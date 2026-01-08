@@ -14,8 +14,6 @@ revision_history:
 
 # Deliver Solutions that Work as Expected
 
-> **NOTE TO SELF**: _This document is needs concrete coding examples to demonstrate ideas!_
-
 ## Other References
 
 - [Unit Testing Guidelines: What to Test And What Not](https://www.automatetheplanet.com/unit-testing-guidelines/)

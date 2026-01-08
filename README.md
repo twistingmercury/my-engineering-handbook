@@ -5,7 +5,7 @@
 
 ## A note from me
 
-_I believe this a practical approach on how a team can work together to deliver secure, high-quality software solutions that meet user needs within a reasonable timeframes. It's not just "theory" it works! I evolved this approach at my last gig as Software Engineering Manager._
+_I believe this a practical approach on how a team can work together to deliver secure, high-quality software solutions that meet user needs within a reasonable timeframe. It's not just "theory" it works! I evolved this approach at my last gig as Software Engineering Manager._
 
 ---
 

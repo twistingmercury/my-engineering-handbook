@@ -2,7 +2,16 @@
 title: "Observability: Heartbeats, Readiness, and Liveness"
 description: "Health check endpoint standards for auto-healing, auto-scaling, and Kubernetes readiness/liveness probes"
 category: "Observability"
-tags: ["health-checks", "heartbeat", "kubernetes", "readiness", "liveness", "auto-healing", "monitoring"]
+tags:
+  [
+    "health-checks",
+    "heartbeat",
+    "kubernetes",
+    "readiness",
+    "liveness",
+    "auto-healing",
+    "monitoring",
+  ]
 audience: "Software Engineers, DevOps Engineers"
 version: "1.0"
 date: "2024-11-11"
@@ -118,6 +127,3 @@ components:
           type: number
           minimum: 0
 ```
-
-## Revision History
-
