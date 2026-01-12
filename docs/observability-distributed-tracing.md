@@ -98,6 +98,7 @@ Tracing and logging serve different purposes and complement each other:
 This is why we set production log level to `Warn` instead of `Info`. We don't need to log every successful request because traces already capture that information. Logs focus on deviations from normal operation.
 
 **Correlation IDs tie them together.** When you need to investigate an issue, correlation IDs let you:
+
 1. Find the relevant log entry (the anomaly that needs attention)
 2. Pull up the associated trace (the full context of what happened)
 3. Understand both what went wrong and why

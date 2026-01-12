@@ -58,7 +58,7 @@ Don't waste time testing:
 - 3rd party libraries and APIs (trust that they test their own code)
 - Constants and configuration values
 - Auto-generated code
-- Plain data structures with no behavior (POJOs, DTOs, etc.)
+- Plain data structures with no behavior (POJOs/POCOs, DTOs, etc.)
 
 This isn't an exhaustive list. Use your judgment. If a test wouldn't catch a real bug or doesn't give you confidence the code works, skip it. Just document why you skipped it so future developers understand the reasoning.
 
@@ -72,7 +72,7 @@ If you built a RESTful API, your E2E tests should hit every endpoint and verify 
 
 These tests run in isolated Docker environments that spin up everything your service needs: databases, message queues, dependent services, the whole stack. Here's the typical flow:
 
-1. **Execute the action** - Use `curl` to hit your API, or run your CLI tool, or whatever your users would do. Write these tests in whatever language makes sense (we've used BATS successfully), but here's the key: don't import or depend on your service's code. Test it like a black box, the way a real user would.
+1. **Execute the action** - Use `curl` to hit your API, or run your CLI tool, or whatever your users would do. Write these tests in whatever language makes sense, but here's the key: don't import or depend on your service's code. Test it like a black box, the way a real user would.
 
 2. **Verify the response** - Check that you got what you expected. For APIs, test all endpoints and all possible response codes (200s, 400s, 500s).
 

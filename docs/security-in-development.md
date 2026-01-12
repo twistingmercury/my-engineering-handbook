@@ -2,7 +2,15 @@
 title: "Security in Our Development Process"
 description: "Secure coding practices, workflow security, and data protection guidelines for building safe software"
 category: "Core Principles"
-tags: ["security", "code-review", "secrets-management", "data-protection", "PHI", "OWASP"]
+tags:
+  [
+    "security",
+    "code-review",
+    "secrets-management",
+    "data-protection",
+    "PHI",
+    "OWASP",
+  ]
 audience: "Software Engineers, DevOps Engineers"
 version: "1.0"
 date: "2024-11-11"
@@ -64,7 +72,7 @@ Before adding any third-party library:
 - Consider the maintenance status - is this project actively maintained or abandonware?
 - Look at the project's security track record - have they handled past issues well?
 
-Our CI pipeline runs automated vulnerability scanning and license compliance checking on every build. Regular dependency updates aren't optional - they're part of keeping the lights on.
+Our CI pipeline should run automated vulnerability scanning and license compliance checking on every build. Regular dependency updates aren't optional - they're part of keeping the lights on.
 
 ## Development Workflow Security
 
@@ -112,7 +120,7 @@ If the scanner finds something, the build fails. Fix it before merging, not afte
 
 ### PHI Never Leaves Production
 
-Real patient data stays in production. Full stop.
+Real customer data stays in production. Full stop.
 
 Here's how we handle testing and development:
 
@@ -136,7 +144,7 @@ Logs are for debugging, not for data collection. They should help you understand
 
 - Passwords or API keys
 - Personal health information
-- Credit card numbers or SSNs
+- Credit card numbers, SSNs, or any PII
 - Full request/response bodies with sensitive data
 
 If you're not sure whether something is safe to log, assume it isn't and ask.
@@ -150,7 +158,7 @@ Best practices we follow:
 - Run as non-root users (containers don't need root permissions)
 - Use minimal base images (less code = smaller attack surface)
 - Never bake secrets into images (they're visible to anyone with access)
-- Keep base images updated (patch vulnerabilities regularly)
+- Keep base images updated; patch vulnerabilities regularly. That mean build a new image.
 
 ## When Security Issues Happen
 
@@ -177,7 +185,6 @@ Who needs to know:
 - Security team (always)
 - Product owners (they need to know what's at risk)
 - Infrastructure team (if it involves deployment or infrastructure)
-- Compliance team (for anything involving PHI)
+- Compliance team (for anything involving PII or PHI)
 
 The faster we escalate, the faster we can respond. Don't sit on security issues hoping they'll fix themselves.
-

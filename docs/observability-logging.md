@@ -2,7 +2,16 @@
 title: "Observability: Logging"
 description: "Structured logging standards, log levels, and what to log for effective debugging without exposing sensitive data"
 category: "Observability"
-tags: ["logging", "structured-logging", "log-levels", "stdout", "correlation-ids", "PII", "PHI"]
+tags:
+  [
+    "logging",
+    "structured-logging",
+    "log-levels",
+    "stdout",
+    "correlation-ids",
+    "PII",
+    "PHI",
+  ]
 audience: "Software Engineers, DevOps Engineers"
 version: "1.0"
 date: "2024-11-11"
@@ -44,6 +53,7 @@ For containerized applications, always log to `stdout`. Let your container orche
 Treat logs as operational data, not just debugging output. Use JSON or another structured format that you can query and analyze.
 
 Structured logs enable:
+
 - Filtering by specific fields
 - Automated alerting
 - Performance analysis
@@ -66,6 +76,7 @@ Why `Warn` instead of `Info`? Because we use distributed tracing to capture norm
 Logs at `Warn` and above surface the exceptions - things that deviate from normal operation and actually need human attention. This keeps your logs focused on actionable information instead of drowning in noise about successful operations.
 
 The combination gives you complete observability:
+
 - **Traces** (with sampling) capture detailed request flows and performance data
 - **Correlation IDs** tie logs and traces together when you need to investigate
 - **Warn/Error/Critical logs** highlight anomalies and failures that need attention
@@ -128,4 +139,3 @@ This is non-negotiable:
 - **Full request/response bodies** - They often contain sensitive data
 
 When in doubt, don't log it. You can always add more logging later, but you can't un-log sensitive data that's already in production.
-

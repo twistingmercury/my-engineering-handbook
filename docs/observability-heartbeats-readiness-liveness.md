@@ -42,9 +42,9 @@ This information serves multiple purposes:
 
 The heartbeat endpoint doubles as readiness and liveness checks in Kubernetes, so design it carefully.
 
-## How to Define the Heartbeat
+## How to Define the health check
 
-Every service exposes a heartbeat endpoint at `/ops/heartbeat`. Here's the standard OpenAPI spec we use:
+Every service exposes a heartbeat endpoint at `/ops/health`. Here's the standard OpenAPI spec we use:
 
 ```yaml
 openapi: 3.0.3
@@ -53,7 +53,7 @@ info:
   description: Standard health check endpoint for all services
   version: 1.0.0
 paths:
-  /ops/heartbeat:
+  /ops/health:
     get:
       summary: Get service health status
       description: Returns the current health status of the service and its dependencies

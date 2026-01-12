@@ -16,7 +16,7 @@ revision_history:
 
 ## Our guide to scale & high availability
 
-We've all been there—your service suddenly gets super popular, traffic jumps 10 times, and everything feels like chaos. The good news? If you plan smart now, you can avoid those stressful nights later. Make your services stateless by default. Think of them like restaurant servers who can serve any table without remembering past orders. The kitchen—your database—takes care of all the memory.
+We've all been there: your service suddenly gets super popular, traffic jumps 10 times, and everything feels like chaos. The good news? If you plan smart now, you can avoid those stressful nights later. Make your services stateless by default. Think of them like restaurant servers who can serve any table without remembering past orders. The kitchen, your database, takes care of all the memory.
 
 > **The Golden Rule**
 >
@@ -59,7 +59,7 @@ The beautiful thing about well-designed stateless services? You can just add mor
 
 Your orchestration system (Kubernetes, Docker Swarm, etc.) needs to know when to spin up new instances and when to shut down the broken ones. This requires:
 
-- Proper health endpoints: Simple `/ops/heartbeat` checks that actually mean something
+- Proper health endpoints: Simple `/ops/health` checks that actually mean something
 - Meaningful metrics: requests per second, response time, error rates, CPU usage, memory,
 - Automated responses: Let the system make decisions faster than any human could
 

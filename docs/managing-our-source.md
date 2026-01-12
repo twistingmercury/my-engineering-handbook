@@ -65,11 +65,11 @@ Keep it simple and consistent:
 
 **Feature branches:** `feature/<jira-ticket-number>`
 
-- Example: `feature/pe-1234`
+- Example: `feature/ex-1234`
 
 **Bug fix branches:** `bug/<jira-ticket-number>`
 
-- Example: `bug/pe-1235`
+- Example: `bug/ex-1235`
 
 ## A Few Important Things to Remember
 
