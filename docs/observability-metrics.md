@@ -261,6 +261,8 @@ Don't measure everything just because you can. Every metric has a cost:
 
 **Start with RED/USE**, then add business metrics. Add more only when you have specific questions to answer.
 
+> **Coverage vs. Depth:** While you should avoid over-instrumenting individual services, every production service needs core metrics. See [Scale & High Availability](./scale-and-high-availability.md) for why monitoring coverage matters. The goal is complete coverage with focused instrumentation—not metrics everywhere or metrics nowhere.
+
 ### Under-Instrumenting
 
 The opposite problem: you don't have the metrics you need when something breaks.

@@ -42,9 +42,15 @@ This information serves multiple purposes:
 
 The heartbeat endpoint doubles as readiness and liveness checks in Kubernetes, so design it carefully.
 
+## Unified Endpoint Design
+
+While Kubernetes supports separate readiness and liveness probes, we intentionally use a single `/ops/health` endpoint for both. This simplifies implementation while still providing Kubernetes with the information it needs through HTTP status codes (200 for healthy, 503 for unhealthy). Kubernetes uses these status codes to make appropriate routing and restart decisions.
+
 ## How to Define the health check
 
-Every service exposes a heartbeat endpoint at `/ops/health`. Here's the standard OpenAPI spec we use:
+Every service exposes a heartbeat endpoint at `/ops/health`. Here's the standard OpenAPI spec we use.
+
+> **Note**: Status values align with the [twistingmercury/heartbeat](https://github.com/twistingmercury/heartbeat) Go package.
 
 ```yaml
 openapi: 3.0.3
@@ -82,7 +88,7 @@ components:
       properties:
         Status:
           type: string
-          enum: [OK, WARNING, ERROR]
+          enum: [NotSet, OK, Warning, Critical]
           description: Overall health status
         Message:
           type: string
@@ -116,7 +122,7 @@ components:
       properties:
         Status:
           type: string
-          enum: [OK, WARNING, CRITICAL]
+          enum: [NotSet, OK, Warning, Critical]
         URL:
           type: string
           format: uri

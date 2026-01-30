@@ -76,7 +76,7 @@ Set up automated load tests - Test your scaling triggers regularly - Monitor how
 ### Quick Wins for Horizontal Scaling
 
 1. Containerize everything - Makes deployment consistent and fast
-2. Monitor everything - You can't fix what you can't see
+2. Ensure monitoring coverage - Every service needs health checks and core metrics (see [Observability: Metrics](./observability-metrics.md) for what to measure)
 3. Practice scaling down - Don't just test scaling up!
 
 ## The Magic of Caching

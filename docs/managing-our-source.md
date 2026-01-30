@@ -5,7 +5,7 @@ category: "Development Practices"
 tags: ["git", "trunk-based-development", "branching", "pull-requests", "code-review", "ci-cd"]
 audience: "Software Engineers, DevOps Engineers"
 version: "1.0"
-date: "2024-11-11"
+date: "2025-10-06"
 revision_history:
   - date: "2025-10-06"
     author: "Jeremy K. Johnson"
@@ -47,7 +47,7 @@ This catches issues early and ensures only tested, working code makes it to main
 
 When you're working on a new feature or fixing a bug, you'll create your own branch from main. These branches are meant to be:
 
-- **Short-lived** - don't let them hang around too long
+- **Short-lived** - aim for 4 working days maximum. If your PR is from a branch older than 3 days, include a justification in the PR description explaining why
 - **Focused** - one task per branch
 - **Independent** - they shouldn't interfere with what others are doing
 
@@ -57,7 +57,7 @@ Once you've finished your work, create a pull request to merge back into main. T
 
 ### Staying Up to Date
 
-Here's a pro tip: regularly merge changes from main into your development branch. This keeps you current with everyone else's work and helps avoid those dreaded merge conflicts.
+Here's a pro tip: regularly merge changes from main into your development branch. By "regularly," we mean at least once daily, and always before requesting review. This keeps you current with everyone else's work and helps avoid those dreaded merge conflicts.
 
 ## Branch Naming Guidelines
 

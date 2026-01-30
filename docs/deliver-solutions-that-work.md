@@ -49,7 +49,13 @@ Before you call something "done," it needs to check all these boxes. This isn't 
 
 Unit tests should be fast, isolated, and not depend on external resources (no databases, no network calls, no file system).
 
-We aim for good coverage, but "good" doesn't mean 100%. If a file has 20% coverage but the other 80% is just constants and type definitions, that's fine. Most testing frameworks let you exclude that stuff from coverage reports - use those features.
+We aim for good coverage, but "good" doesn't mean 100%. Here's what we target:
+
+- **75% minimum overall line coverage** - This is your baseline across the entire codebase
+- **95% for critical paths** - Authentication, payment processing, data integrity, and security-sensitive code deserve extra attention
+- **Document exceptions** - If you can't hit these targets, write down why. Maybe it's legacy code that's being replaced, or integration code that's better tested at the E2E level. Just explain your reasoning.
+
+If a file has 20% coverage but the other 80% is just constants and type definitions, that's fine. Most testing frameworks let you exclude that stuff from coverage reports - use those features.
 
 ### What Not to Test
 
@@ -67,6 +73,8 @@ This isn't an exhaustive list. Use your judgment. If a test wouldn't catch a rea
 E2E tests verify your system works the way your users (or API clients) expect it to work.
 
 If you built a RESTful API, your E2E tests should hit every endpoint and verify every response type - success cases, error cases, edge cases, all of it.
+
+For details on E2E test infrastructure, Docker setup, and examples, see [End-to-End Test Suite](./builds-and-deployments.md#end-to-end-test-suite) in the builds and deployments guide.
 
 ### How E2E Tests Work
 

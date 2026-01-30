@@ -19,7 +19,7 @@ revision_history:
 
 ## Containers are Central to our CI Build Pipeline
 
-> The actual code for the examples are currently in Go. However, the focus isn't the code; the focus is on using containers to manage the build and end-to-end testing. These principles apply to any language: .NET, Python, Kotlin/Java...you get the idea 😄
+> The actual code for the examples are currently in Go. However, the focus isn't the code; the focus is on using containers to manage the build and end-to-end testing. These principles apply to any language: .NET, Python, Kotlin/Java...you get the idea.
 
 Using Docker and Docker Compose for our build process does a very special thing for us: It makes the build environment predictable and uniform. That means the build we run locally is the same build that runs within our CI pipeline. No more "it works on my machine" nonsense.
 
@@ -64,9 +64,11 @@ Here is an example of a multi-stage build from the [docker-ci/builds/api/build](
 >
 > Developing solid end-to-end tests will probably take just as long as implementing the solution you're developing. So, keep this in mind. You need to factor this in when starting a new project or adding functionality to an existing project.
 
+For the philosophy and testing approach behind E2E tests, see [End-to-end Testing](./deliver-solutions-that-work.md#end-to-end-testing) in the quality standards guide.
+
 This is a little more complex to dive into, so we won't go into the details too far. For a look at what end-to-end tests look like in detail, please refer to the end-to-end test for the API example: [docker-ci/builds/api/tests](https://github.com/twistingmercury/docker-ci-builds/tree/develop/api/tests/e2e)
 
-These tests are written as consumers of the API and don't rely upon any of the code from the API project. It only relies upon what a client may have access to, such as API documentation like swagger.json. In the case of SAMPLE MGMT API, `BATS` and `curl` are the core tools to write the tests, and `SQLCMD` is used to validate any database changes that should be expected. Responses are evaluated against what is documented in the OpenAPI specification (swagger.json).
+These tests are written as consumers of the API and don't rely upon any of the code from the API project. It only relies upon what a client may have access to, such as API documentation like swagger.json. In the example API, `BATS` and `curl` are the core tools to write the tests, and `SQLCMD` is used to validate any database changes that should be expected. Responses are evaluated against what is documented in the OpenAPI specification (swagger.json).
 
 When writing the end to end tests the tools or language to write the tests are secondary. As long as the result is that the tests are conducted from a consumer's perspective, based on the documentation the caller would have, it is fine.
 
@@ -85,8 +87,9 @@ The typical structure of the end-to-end tests are like so, contained within a di
 
 We value and strive to be able to perform zero-downtime deployments. We use release pipelines to help manage this. Continuing with using [docker-ci/builds/api](https://github.com/twistingmercury/docker-ci-builds/tree/develop/api) as an example, here is it's pipeline definition: [api-ci.yaml](https://github.com/twistingmercury/docker-ci-builds/blob/develop/.github/workflows/api-ci.yaml)
 
-The one thing we DO NOT automate is deployment...at first; a human needs to "push the button". We want the be very explicit about when a deployment takes place. This is so we can monitor the deployment to make sure we can rollback quickly if needed. Once we're confident and have a history of deployments going well, we can work on automating 
-the `CD` side of the equation.
+The one thing we DO NOT automate is deployment...at first; a human needs to "push the button". We want the be very explicit about when a deployment takes place. This is so we can monitor the deployment to make sure we can rollback quickly if needed. Once we're confident and have a history of deployments going well, we can work on automating the `CD` side of the equation.
+
+We define "confident" as: 20 consecutive successful production deployments over a minimum of 30 days with zero rollbacks. This threshold ensures we have sufficient evidence that our deployment process, monitoring, and rollback procedures are reliable before removing human oversight.
 
 ### Hosting
 
