@@ -40,3 +40,8 @@ $RECYCLE.BIN/
 *.iws
 *.ipr
 out/
+.claude/rlm_state
+.claude/settings.local.json
+
+# Review tracking (working document)
+docs/REVIEW-ISSUES.md
