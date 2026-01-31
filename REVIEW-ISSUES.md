@@ -117,26 +117,26 @@ These use vague language that needs quantification or clarification.
 
 ### Scale & High Availability
 
-- [ ] **AMB-11**: Caching threshold vague
+- [√] **AMB-11**: Caching threshold vague
   - **Current**: "few hundred calls a day"
   - **Action**: Define specific threshold (e.g., "<500 requests/day")
   - **Recommendation**: Cache when >500 req/day AND (expected hit ratio >60% OR origin latency >100ms OR approaching 70% of rate limits). Document invalidation strategy.
 
-- [ ] **AMB-12**: "Test scaling triggers regularly" undefined
+- [√] **AMB-12**: "Test scaling triggers regularly" undefined
   - **Current**: No frequency specified
   - **Action**: Define frequency (e.g., "monthly" or "quarterly")
   - **Recommendation**: Monthly for production systems, quarterly for non-critical. Test both scale-up and scale-down.
 
 ### Security in Our Development Process
 
-- [ ] **AMB-13**: "Rotate secrets regularly" undefined
+- [√] **AMB-13**: "Rotate secrets regularly" undefined
   - **Current**: No timeframe
   - **Action**: Define frequency (e.g., "every 90 days")
   - **Recommendation**: 90 days default, 30 days for DB passwords/external-facing keys, immediate on team departure or suspected compromise. Automate via secrets manager.
 
 ### Versioning Our Solutions
 
-- [ ] **AMB-14**: "Production-ready" undefined
+- [√] **AMB-14**: "Production-ready" undefined
   - **Current**: No definition
   - **Action**: Define criteria or link to Definition of Done
   - **Recommendation**: Link to Definition of Done. Explicit criteria: CI green, code review approved, observability configured, runbook created, staging tested, rollback documented.

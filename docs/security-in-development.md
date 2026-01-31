@@ -50,7 +50,11 @@ Here's how we handle secrets:
 
 - Use environment variables or secret management systems (Azure Key Vault, AWS Secrets Manager, etc.)
 - Add `.env` files to `.gitignore` immediately - before your first commit
-- Rotate secrets regularly, especially after team changes
+- Rotate secrets on a schedule:
+  - **90 days**: Default for most secrets (API keys, service credentials)
+  - **30 days**: Database passwords, external-facing API keys
+  - **Immediately**: After any team member departure or suspected compromise
+  - **Automate**: Use your secrets manager's built-in rotation features (Azure Key Vault, AWS Secrets Manager) instead of doing it manually
 - Use different secrets for dev, staging, and production
 
 **Red flags that should trigger alarm bells:**
