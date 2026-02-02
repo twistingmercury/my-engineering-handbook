@@ -41,11 +41,9 @@ An application is considered production-ready when it meets all criteria in our 
 
 Until all these boxes are checked, use pre-release versioning (like `1.0.0-alpha.1` or `1.0.0-rc.2`) to signal the application isn't ready for production deployment.
 
-### Software Version Information
+### Command Line Version Info
 
 Every application should be able to tell you what version when asked. Here's what we expect:
-
-### Command Line Version Info
 
 All programs should support the standard `--version` flag (following [GNU standards](https://www.gnu.org/prep/standards/html_node/Command_002dLine-Interfaces.html)). The short `-v` option is nice to have, but not required.
 
@@ -53,7 +51,7 @@ When possible, include these details in your version output:
 
 - **Date**: Build date in ISO 8601 format (`YYYY-MM-DD`)
   _example:_ `BUILD_DATE=$(date +"%Y-%m-%d")`
-- **Commit**: Short Git commit hash (`1234abcd`)
+- **Commit**: Short Git commit hash (`1234abc`)
   _example:_ `COMMIT_HASH=$(git rev-parse --short HEAD)`
 - **Version**: Comes from the latest git tag
   _example:_ `VERSION=$(git describe --tags --always --dirty 2>/dev/null || echo "dev")`

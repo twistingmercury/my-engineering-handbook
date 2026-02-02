@@ -5,7 +5,7 @@
 
 ## A note from me
 
-_I believe this a practical approach on how a team can work together to deliver secure, high-quality software solutions that meet user needs within a reasonable timeframe. It's not just "theory" it works! I evolved this approach at my last gig as Software Engineering Manager._
+I believe this a practical approach on how a team can work together to deliver secure, high-quality software solutions that meet user needs within a reasonable timeframe. It's not just "theory" it works!
 
 ---
 
@@ -23,7 +23,7 @@ practices. Such sources include, but are not limited to:
 
 This series of documents outlines how we strive to operate on a day to day
 basis. Our goal is to do things "right" the first time, every time. We also
-understand that there are always exceptions, and we sometimes we need to handle
+understand that there are always exceptions, and we sometimes need to handle
 things differently. The ultimate goal is that we deliver safe software
 solutions (security) that do what they are intended to do (quality) within a
 reasonable timeframe (productivity).
@@ -81,3 +81,7 @@ we will quickly let everyone involved know, and not wait until the last minute!
 
 1. [Flexible Application Configuration](./docs/flexible-application-configuration.md)
 2. [Scale & High Availability](./docs/scale-and-high-availability.md)
+
+### Infrastructure & Tooling
+
+1. [Tooling Standards](./docs/tooling-standards.md)

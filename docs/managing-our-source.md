@@ -47,11 +47,13 @@ This catches issues early and ensures only tested, working code makes it to main
 
 When you're working on a new feature or fixing a bug, you'll create your own branch from main. These branches are meant to be:
 
-- **Short-lived** - aim for 4 working days maximum. If your PR is from a branch older than 3 days, include a justification in the PR description explaining why
+- **Short-lived** - aim for 2 working days maximum. Branches older than 2 days require team lead approval with justification documented in the PR description
 - **Focused** - one task per branch
 - **Independent** - they shouldn't interfere with what others are doing
 
 ### Code Reviews & Pull Requests
+
+All changes require a pull request. Direct commits to main are blocked by branch protection rules.
 
 Once you've finished your work, create a pull request to merge back into main. This kicks off our code review process where your teammates will take a look and make sure everything looks good. Only after passing review and all tests does your PR get merged.
 

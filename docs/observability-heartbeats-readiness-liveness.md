@@ -133,3 +133,15 @@ components:
           type: number
           minimum: 0
 ```
+
+## Health Status Determination
+
+The health status enum maps to resource utilization thresholds defined in [Observability: Logging](./observability-logging.md#resource-limit-thresholds):
+
+| Resource Utilization | Health Status |
+| -------------------- | ------------- |
+| < 75%                | OK            |
+| 75% - 80%            | Warning       |
+| > 80%                | Critical      |
+
+Apply these thresholds when checking memory, CPU, disk, database connections, and file descriptors. The overall health status should reflect the worst status among all checked resources and dependencies.

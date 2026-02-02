@@ -36,7 +36,7 @@ Some people advocate "log everything!" That sounds great until you're drowning i
 Compare these two log entries:
 
 - `user login failed`
-- `{"user_id":"jdoe", "event":"login", "level":"info", "timestamp":"2025-11-11T14:23:45Z", "trace_id":"4bf92f3577b34da6a3ce929d0e0e4736", "span_id":"00f067aa0ba902b7", "error":"invalid_password"}`
+- `{"user_id":"jdoe", "event":"login", "level":"warn", "timestamp":"2025-11-11T14:23:45Z", "trace_id":"4bf92f3577b34da6a3ce929d0e0e4736", "span_id":"00f067aa0ba902b7", "error":"invalid_password"}`
 
 The second one tells a story. You know who, what, when, and why. The first one just tells you something went wrong somewhere for someone.
 
@@ -151,7 +151,7 @@ Use common sense, but follow these guidelines when deciding what to log.
 - **Database operations** - Connection info, query types (not full queries), result counts
 - **Message queue operations** - Topics, queues, producer/consumer IDs, message counts
 - **Errors** - Error type, message, stack trace (sanitized)
-- **User actions** - User ID, session ID (no personal information)
+- **User actions** - Internal user ID (UUIDs, database IDs), session ID (never log the personal information these IDs reference: usernames, emails, SSNs, etc.)
 
 #### Sanitizing Stack Traces
 
@@ -187,6 +187,8 @@ This is non-negotiable:
 - **Secrets** - Passwords, API keys, tokens, certificates
 - **Sensitive business data** - Account numbers, credit cards, financial details
 - **Full request/response bodies** - They often contain sensitive data
+
+For comprehensive data protection guidelines, see [Data Protection](./security-in-development.md#data-protection).
 
 When in doubt, don't log it. You can always add more logging later, but you can't un-log sensitive data that's already in production.
 

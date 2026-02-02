@@ -34,7 +34,7 @@ We pick simple architectures and tools that make our code clean and maintainable
 
 Before you call something "done," it needs to check all these boxes. This isn't bureaucracy - it's the difference between shipping quality software and shipping future headaches.
 
-- **README.md is current** - Engineers should understand what the project does and how to work with it
+- **README.md is current** - Engineers should understand what the project does and how to work with it. See [README Requirements](./importance-of-documentation.md#project-readme-requirements)
 - **CHANGELOG.md is updated** - Document what changed in this release
 - **Observability is working** - Logs and traces flow to Datadog, indexes are configured, retention policies are set
 - **Monitoring and alerts are live** - We know when things break, ideally before users do
@@ -47,7 +47,7 @@ Before you call something "done," it needs to check all these boxes. This isn't 
 
 ## Unit Tests
 
-Unit tests should be fast, isolated, and not depend on external resources (no databases, no network calls, no file system).
+Unit tests should be fast, isolated, and not depend on external resources (no databases, no network calls, no external file system dependencies. Local test fixtures and embedded test data are acceptable).
 
 We aim for good coverage, but "good" doesn't mean 100%. Here's what we target:
 
@@ -72,7 +72,7 @@ This isn't an exhaustive list. Use your judgment. If a test wouldn't catch a rea
 
 E2E tests verify your system works the way your users (or API clients) expect it to work.
 
-If you built a RESTful API, your E2E tests should hit every endpoint and verify every response type - success cases, error cases, edge cases, all of it.
+If you built a RESTful API, your E2E tests should hit every endpoint and verify every response type - success cases, error cases, edge cases, all of it. Prioritize your testing efforts: 1) All success paths, 2) Documented error responses, 3) Auth boundaries, 4) Edge cases. Use your judgment on testing every permutation of query parameters or request variations.
 
 For details on E2E test infrastructure, Docker setup, and examples, see [End-to-End Test Suite](./builds-and-deployments.md#end-to-end-test-suite) in the builds and deployments guide.
 

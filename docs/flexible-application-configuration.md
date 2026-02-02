@@ -41,7 +41,7 @@ This is your bread and butter for containerized apps. Environment variables are:
 Config files are great for complex setups and local development:
 
 - **Better for complex config** – Nested structures, arrays, etc.
-- **Version controllable** – Can be checked in for defaults
+- **Version controllable** – Non-sensitive defaults can be checked in (never credentials or environment-specific values)
 - **Human readable** – Easy to understand and modify
 
 ### 3. Command Line Flags
@@ -60,6 +60,8 @@ When your app starts up, it should check for configuration in this order. **Late
 2. **Configuration files** – More complex structured config
 3. **Environment variables** – Container-friendly overrides
 4. **Command line flags** – Explicit overrides and debugging
+
+> **Note on 12-Factor App alignment**: The [12-Factor App](https://12factor.net/config) emphasizes environment variables as the primary config source for production. This precedence order supports local development workflows where config files provide convenience. In containerized production environments, environment variables should contain all necessary configuration rather than relying on defaults or config files.
 
 **Important:** Your built-in defaults should _never_ be production-ready values. They should be obviously development values that would fail safely in production. Examples of safe defaults:
 
@@ -89,6 +91,16 @@ When your app starts up, it should check for configuration in this order. **Late
 ### Handling Sensitive Configuration
 
 Never, ever put secrets in your code or regular config files. Here's how to handle sensitive data properly:
+
+#### Configuration Types and Where They Belong
+
+Different types of configuration data have different security and lifecycle requirements. Here's where each type should live:
+
+| Configuration Type | Storage Method | Examples | Version Controlled? |
+|-------------------|----------------|----------|-------------------|
+| **Non-sensitive settings** | Config files in repo | Port numbers, log levels, timeouts, feature flags, retry counts | Yes |
+| **Environment-specific settings** | ConfigMaps / Environment variables | Service URLs, database names, queue names, external API endpoints | No (managed per environment) |
+| **Credentials & secrets** | Secrets Manager / Kubernetes Secrets | Passwords, API keys, certificates, encryption keys, access tokens | Never |
 
 #### What Counts as Sensitive?
 

@@ -59,8 +59,8 @@ The beautiful thing about well-designed stateless services? You can just add mor
 
 Your orchestration system (Kubernetes, Docker Swarm, etc.) needs to know when to spin up new instances and when to shut down the broken ones. This requires:
 
-- Proper health endpoints: Simple `/ops/health` checks that actually mean something
-- Meaningful metrics: requests per second, response time, error rates, CPU usage, memory,
+- Proper health endpoints: For health endpoint design and implementation, see [Observability: Health Checks](./observability-heartbeats-readiness-liveness.md).
+- Meaningful metrics: requests per second, response time, error rates, CPU usage, memory utilization
 - Automated responses: Let the system make decisions faster than any human could
 
 ### The Testing Reality Check
