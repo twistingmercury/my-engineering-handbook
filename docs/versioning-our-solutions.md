@@ -5,7 +5,6 @@ category: "Development Practices"
 tags: ["semver", "versioning", "docker", "OCI", "git-tags", "version-commands"]
 audience: "Software Engineers, DevOps Engineers"
 version: "1.0"
-date: "2024-11-11"
 revision_history:
   - date: "2024-11-11"
     author: "Jeremy K. Johnson"
@@ -27,11 +26,23 @@ Our team follows [Semantic Versioning 2.0.0](https://semver.org/) for all our pr
 
 Here's the deal: all production-ready applications and container images get proper semantic versioning. For test builds or anything that's not quite ready for production, we follow the pre-release versioning guidelines from [SemVer spec item 9](https://semver.org/#spec-item-9).
 
-### Software Version Information
+### What "Production-Ready" Means
 
-Every application should be able to tell you what version when asked. Here's what we expect:
+An application is considered production-ready when it meets all criteria in our [Definition of Done](./deliver-solutions-that-work.md#definition-of-done). Specifically:
+
+- **CI pipeline is green** - All tests passing (unit, E2E, integration)
+- **Code review approved** - Someone else reviewed and signed off
+- **Observability configured** - Logs, metrics, and traces flowing to monitoring systems
+- **Runbook created and reviewed** - Operations documentation exists and has been validated
+- **Deployment tested** - Successfully deployed and verified in staging environment
+- **Rollback procedure documented and tested** - We know how to undo this if things go wrong
+- **Security scans pass** - No unaddressed vulnerabilities
+
+Until all these boxes are checked, use pre-release versioning (like `1.0.0-alpha.1` or `1.0.0-rc.2`) to signal the application isn't ready for production deployment.
 
 ### Command Line Version Info
+
+Every application should be able to tell you what version when asked. Here's what we expect:
 
 All programs should support the standard `--version` flag (following [GNU standards](https://www.gnu.org/prep/standards/html_node/Command_002dLine-Interfaces.html)). The short `-v` option is nice to have, but not required.
 
@@ -39,7 +50,7 @@ When possible, include these details in your version output:
 
 - **Date**: Build date in ISO 8601 format (`YYYY-MM-DD`)
   _example:_ `BUILD_DATE=$(date +"%Y-%m-%d")`
-- **Commit**: Short Git commit hash (`1234abcd`)
+- **Commit**: Short Git commit hash (`1234abc`)
   _example:_ `COMMIT_HASH=$(git rev-parse --short HEAD)`
 - **Version**: Comes from the latest git tag
   _example:_ `VERSION=$(git describe --tags --always --dirty 2>/dev/null || echo "dev")`

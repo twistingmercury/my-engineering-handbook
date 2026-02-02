@@ -5,7 +5,6 @@ category: "Core Principles"
 tags: ["documentation", "README", "CHANGELOG", "runbooks", "confluence", "operational-docs"]
 audience: "Software Engineers, DevOps Engineers"
 version: "1.0"
-date: "2024-11-11"
 revision_history:
   - date: "2025-09-30"
     author: "Jeremy K. Johnson"
@@ -36,6 +35,10 @@ Every project gets a README that follows this structure. No exceptions.
 # Project Name
 
 > **Maturity Level**: [Emerging|Basic|Mature] - (a short sentence fragment for context)
+>
+> - **Emerging**: Prototype, not production-ready, expect breaking changes
+> - **Basic**: Production-ready but actively evolving, expect minor version changes
+> - **Mature**: Stable, battle-tested, changes are rare
 
 ---
 
@@ -75,7 +78,7 @@ Follow these rules to keep READMEs useful:
 
 ## Operational Documentation
 
-Regular maintenance and operational tasks live in our team's OpsBook. We don't rely on people remembering to do these tasks - each one has a Jira Automation that creates tickets on schedule.
+Regular maintenance and operational tasks live in our team's OpsBook (operational runbook containing maintenance procedures and incident response guides). We don't rely on people remembering to do these tasks - each one has a Jira Automation that creates tickets on schedule.
 
 Examples of operational tasks:
 
@@ -98,7 +101,7 @@ Different documentation serves different purposes. Use the right tool for the jo
 
 ### CHANGELOG.md
 
-- **When to use:** Every project that has versioned releases
+- **When to use:** Projects with semantic version releases (v1.0.0, v1.2.3, etc.). Projects without versioned releases (internal scripts, one-off tools) may use commit history instead
 - **What goes in it:** What changed between versions (follow [Keep a Changelog](https://keepachangelog.com/))
 - **Who it's for:** Users upgrading versions, maintainers tracking history
 

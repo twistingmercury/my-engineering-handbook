@@ -13,7 +13,6 @@ tags:
   ]
 audience: "Software Engineers, DevOps Engineers"
 version: "1.0"
-date: "2024-11-11"
 revision_history:
   - date: "2024-11-11"
     author: "Jeremy K. Johnson"
@@ -50,7 +49,11 @@ Here's how we handle secrets:
 
 - Use environment variables or secret management systems (Azure Key Vault, AWS Secrets Manager, etc.)
 - Add `.env` files to `.gitignore` immediately - before your first commit
-- Rotate secrets regularly, especially after team changes
+- Rotate secrets on a schedule:
+  - **90 days**: Default for most secrets (API keys, service credentials)
+  - **30 days**: Database passwords, external-facing API keys
+  - **Immediately**: After any team member departure or suspected compromise
+  - **Automate**: Use your secrets manager's built-in rotation features (Azure Key Vault, AWS Secrets Manager) instead of doing it manually
 - Use different secrets for dev, staging, and production
 
 **Red flags that should trigger alarm bells:**
@@ -67,12 +70,12 @@ Every npm install, pip install, or go get is a trust decision. Are you sure you 
 
 Before adding any third-party library:
 
-- Check for known vulnerabilities (our CI does this automatically, but look anyway)
+- Check for known vulnerabilities (our CI runs automated scans on every build - review the findings in your PR checks)
 - Review the license terms - some licenses have implications for our business
 - Consider the maintenance status - is this project actively maintained or abandonware?
 - Look at the project's security track record - have they handled past issues well?
 
-Our CI pipeline should run automated vulnerability scanning and license compliance checking on every build. Regular dependency updates aren't optional - they're part of keeping the lights on.
+Our CI pipeline runs automated vulnerability scanning and license compliance checking on every build. If CI checks are green, manual re-scanning is not required. Regular dependency updates aren't optional - they're part of keeping the lights on.
 
 ## Development Workflow Security
 
@@ -107,14 +110,14 @@ These aren't just annoying hoops to jump through - they've saved us from product
 
 Our CI pipeline is like a security guard that never sleeps, never gets tired, and never forgets to check something.
 
-Automated checks on every build:
+Automated checks run on every build and are mandatory:
 
 - Source code vulnerability scanning
 - Dependency vulnerability checking
 - Docker image security scanning
 - Infrastructure-as-code misconfigurations
 
-If the scanner finds something, the build fails. Fix it before merging, not after.
+**Security scans are mandatory. Builds fail on critical or high severity findings.** Medium severity findings must be addressed within the current sprint. Fix security issues before merging, not after.
 
 ## Data Protection
 
@@ -159,6 +162,7 @@ Best practices we follow:
 - Use minimal base images (less code = smaller attack surface)
 - Never bake secrets into images (they're visible to anyone with access)
 - Keep base images updated; patch vulnerabilities regularly. That mean build a new image.
+- All images must include OCI labels for traceability. See [Docker Image Labeling](./versioning-our-solutions.md#docker-image-labeling).
 
 ## When Security Issues Happen
 
@@ -188,3 +192,14 @@ Who needs to know:
 - Compliance team (for anything involving PII or PHI)
 
 The faster we escalate, the faster we can respond. Don't sit on security issues hoping they'll fix themselves.
+
+#### When You Don't Have Dedicated Security Resources
+
+Not every team has a dedicated security or compliance team. If that's your situation, here's how to handle security findings:
+
+- **Escalate to your team lead or engineering manager** - they can help assess severity and coordinate the response
+- **Rely on automated security scanning as your primary gate** - make sure CI/CD pipeline scanning is enabled and enforced
+- **Schedule monthly security reviews with senior engineers or the architecture team** - regular check-ins help catch issues early
+- **Document security decisions in ADRs** - create an audit trail showing why you made the choices you did
+
+The key is having a clear path for security concerns, even if it's not a formal security team. When in doubt, escalate up.
