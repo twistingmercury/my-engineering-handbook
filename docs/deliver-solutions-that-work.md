@@ -5,7 +5,6 @@ category: "Core Principles"
 tags: ["quality", "testing", "unit-tests", "e2e-tests", "definition-of-done", "documentation-testing"]
 audience: "Software Engineers, Test Engineers"
 version: "1.0"
-date: "2024-11-11"
 revision_history:
   - date: "2025-10-02"
     author: "Jeremy K. Johnson"

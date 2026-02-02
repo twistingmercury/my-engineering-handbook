@@ -5,7 +5,6 @@ category: "Development Practices"
 tags: ["semver", "versioning", "docker", "OCI", "git-tags", "version-commands"]
 audience: "Software Engineers, DevOps Engineers"
 version: "1.0"
-date: "2024-11-11"
 revision_history:
   - date: "2024-11-11"
     author: "Jeremy K. Johnson"

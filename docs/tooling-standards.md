@@ -14,7 +14,6 @@ tags:
   ]
 audience: "Software Engineers, DevOps Engineers, Architects"
 version: "1.0"
-date: "2026-02-02"
 revision_history:
   - date: "2026-02-02"
     author: "Jeremy K. Johnson"

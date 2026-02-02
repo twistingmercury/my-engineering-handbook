@@ -5,7 +5,6 @@ category: "Operations"
 tags: ["configuration", "12-factor", "environment-variables", "secrets", "docker", "kubernetes"]
 audience: "Software Engineers, DevOps Engineers"
 version: "1.0"
-date: "2024-11-11"
 revision_history:
   - date: "2025-09-29"
     author: "Jeremy K. Johnson"

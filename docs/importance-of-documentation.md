@@ -5,7 +5,6 @@ category: "Core Principles"
 tags: ["documentation", "README", "CHANGELOG", "runbooks", "confluence", "operational-docs"]
 audience: "Software Engineers, DevOps Engineers"
 version: "1.0"
-date: "2024-11-11"
 revision_history:
   - date: "2025-09-30"
     author: "Jeremy K. Johnson"

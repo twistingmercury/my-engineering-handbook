@@ -13,7 +13,6 @@ tags:
   ]
 audience: "Software Engineers, DevOps Engineers"
 version: "1.0"
-date: "2024-11-11"
 revision_history:
   - date: "2026-01-30"
     author: "Jeremy K. Johnson"
@@ -170,4 +169,3 @@ Most OpenTelemetry SDKs automatically inject `trace_id` and `span_id` into your 
 
 This approach gives you complete observability while keeping costs reasonable. You're not paying to store logs for millions of successful requests when traces already capture that data more efficiently.
 
-## Revision History

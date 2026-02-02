@@ -28,6 +28,25 @@ things differently. The ultimate goal is that we deliver safe software
 solutions (security) that do what they are intended to do (quality) within a
 reasonable timeframe (productivity).
 
+### What This Handbook Is
+
+This handbook documents our **approach and standards** for writing good software. It answers questions like:
+
+- What principles guide our decisions?
+- What does "done" look like?
+- What standards do we follow for security, observability, and configuration?
+
+### What This Handbook Is Not
+
+This handbook is **not a tutorial**. It won't teach you how to:
+
+- Set up Envoy or configure a service mesh
+- Write a RESTful API from scratch
+- Deploy to Kubernetes step-by-step
+- Use specific libraries or frameworks
+
+For implementation details, refer to official documentation, team wikis, or ask a teammate. This handbook tells you *what* we expect and *why* - not *how* to do it.
+
 ## Our philosophy
 
 1. **Security is foundational**: We build secure solutions that keep our users

@@ -5,7 +5,6 @@ category: "Development Practices"
 tags: ["git", "trunk-based-development", "branching", "pull-requests", "code-review", "ci-cd"]
 audience: "Software Engineers, DevOps Engineers"
 version: "1.0"
-date: "2025-10-06"
 revision_history:
   - date: "2025-10-06"
     author: "Jeremy K. Johnson"
