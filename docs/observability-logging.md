@@ -13,7 +13,7 @@ tags:
     "PHI",
   ]
 audience: "Software Engineers, DevOps Engineers"
-version: "1.0"
+version: "1.0.0"
 revision_history:
   - date: "2024-11-11"
     author: "Jeremy K. Johnson"
@@ -212,3 +212,7 @@ This proactive review often catches problems before they become incidents. It al
 - Document any findings or concerns in your team's runbook or incident tracking system
 
 Daily log review takes 15-30 minutes and significantly improves system reliability by catching issues early. Teams that practice this consistently see far fewer midnight and early morning fires—problems get addressed during business hours before they escalate.
+
+---
+
+[← Previous: Builds and Deployments](./builds-and-deployments.md) | [↑ Back to How We Operate](../README.md) | [Next: Observability: Distributed Tracing →](./observability-distributed-tracing.md)

@@ -13,7 +13,7 @@ tags:
     "portability",
   ]
 audience: "Software Engineers, DevOps Engineers, Architects"
-version: "1.0"
+version: "1.0.0"
 revision_history:
   - date: "2026-02-02"
     author: "Jeremy K. Johnson"
@@ -345,3 +345,7 @@ Good tooling standards balance consistency with flexibility. Be specific about p
 The goal isn't standardization for its own sake - it's enabling teams to build reliable, portable, cloud-native solutions without reinventing the wheel every time.
 
 Choose patterns over products. Build for portability. Let managed services handle undifferentiated heavy lifting. Focus on business value, not infrastructure complexity.
+
+---
+
+[← Previous: Scale & High Availability](./scale-and-high-availability.md) | [↑ Back to How We Operate](../README.md)

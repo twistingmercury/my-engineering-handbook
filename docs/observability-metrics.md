@@ -4,7 +4,7 @@ description: "Prometheus metrics implementation covering RED/USE methods, when t
 category: "Observability"
 tags: ["metrics", "prometheus", "RED-method", "USE-method", "cardinality", "alerting", "dashboards"]
 audience: "Software Engineers, DevOps Engineers"
-version: "1.0"
+version: "1.0.0"
 revision_history:
   - date: "2024-11-11"
     author: "Jeremy K. Johnson"
@@ -283,3 +283,7 @@ Metrics aren't free. With default Prometheus settings:
 - 1,000,000 active time series = ~1-2 GB/hour of storage
 
 High cardinality labels can quickly make metrics expensive. Monitor your time series count and set retention policies appropriately.
+
+---
+
+[← Previous: Observability: Distributed Tracing](./observability-distributed-tracing.md) | [↑ Back to How We Operate](../README.md) | [Next: Observability: Health Checks →](./observability-heartbeats-readiness-liveness.md)

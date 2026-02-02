@@ -4,7 +4,7 @@ description: "Quality standards, testing strategies, and definition of done for 
 category: "Core Principles"
 tags: ["quality", "testing", "unit-tests", "e2e-tests", "definition-of-done", "documentation-testing"]
 audience: "Software Engineers, Test Engineers"
-version: "1.0"
+version: "1.0.0"
 revision_history:
   - date: "2025-10-02"
     author: "Jeremy K. Johnson"
@@ -108,3 +108,7 @@ This is a manual process, but it doesn't take long:
 3. **Get a real user** - Have a teammate (ideally someone not familiar with the project) follow your instructions. Every question they ask is a gap in your docs.
 
 4. **Iterate until it works** - Once someone can complete the task without asking questions, your docs are ready.
+
+---
+
+[← Previous: Security in Development](./security-in-development.md) | [↑ Back to How We Operate](../README.md) | [Next: Importance of Documentation →](./importance-of-documentation.md)

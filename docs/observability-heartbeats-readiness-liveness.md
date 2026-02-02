@@ -13,7 +13,7 @@ tags:
     "monitoring",
   ]
 audience: "Software Engineers, DevOps Engineers"
-version: "1.0"
+version: "1.0.0"
 revision_history:
   - date: "2024-11-11"
     author: "Jeremy K. Johnson"
@@ -144,3 +144,7 @@ The health status enum maps to resource utilization thresholds defined in [Obser
 | > 80%                | Critical      |
 
 Apply these thresholds when checking memory, CPU, disk, database connections, and file descriptors. The overall health status should reflect the worst status among all checked resources and dependencies.
+
+---
+
+[← Previous: Observability: Metrics](./observability-metrics.md) | [↑ Back to How We Operate](../README.md) | [Next: Flexible Application Configuration →](./flexible-application-configuration.md)

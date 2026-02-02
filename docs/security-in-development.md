@@ -12,7 +12,7 @@ tags:
     "OWASP",
   ]
 audience: "Software Engineers, DevOps Engineers"
-version: "1.0"
+version: "1.0.0"
 revision_history:
   - date: "2024-11-11"
     author: "Jeremy K. Johnson"
@@ -203,3 +203,7 @@ Not every team has a dedicated security or compliance team. If that's your situa
 - **Document security decisions in ADRs** - create an audit trail showing why you made the choices you did
 
 The key is having a clear path for security concerns, even if it's not a formal security team. When in doubt, escalate up.
+
+---
+
+[↑ Back to How We Operate](../README.md) | [Next: Deliver Solutions that Work →](./deliver-solutions-that-work.md)

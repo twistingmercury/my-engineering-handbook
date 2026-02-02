@@ -4,7 +4,7 @@ description: "Semantic versioning standards, version information requirements, a
 category: "Development Practices"
 tags: ["semver", "versioning", "docker", "OCI", "git-tags", "version-commands"]
 audience: "Software Engineers, DevOps Engineers"
-version: "1.0"
+version: "1.0.0"
 revision_history:
   - date: "2024-11-11"
     author: "Jeremy K. Johnson"
@@ -90,3 +90,7 @@ All our Docker images should include these labels based on the [OCI Image Format
 ```
 
 **Important:** The `org.opencontainers.image.version` label should match your software version and align with your Git tag. Keep everything in sync!
+
+---
+
+[← Previous: Managing Our Source](./managing-our-source.md) | [↑ Back to How We Operate](../README.md) | [Next: Builds and Deployments →](./builds-and-deployments.md)

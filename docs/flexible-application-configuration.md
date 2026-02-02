@@ -4,7 +4,7 @@ description: "Configuration best practices using environment variables, config f
 category: "Operations"
 tags: ["configuration", "12-factor", "environment-variables", "secrets", "docker", "kubernetes"]
 audience: "Software Engineers, DevOps Engineers"
-version: "1.0"
+version: "1.0.0"
 revision_history:
   - date: "2025-09-29"
     author: "Jeremy K. Johnson"
@@ -135,3 +135,7 @@ When configuration validation fails, your application should follow these specif
 - **Let the orchestrator handle restarts** – Kubernetes and other orchestrators will restart your container based on their policies
 
 This approach ensures configuration problems are caught immediately at startup rather than causing mysterious failures later during runtime. The orchestrator can then apply its restart policies while you investigate and fix the configuration.
+
+---
+
+[← Previous: Observability: Health Checks](./observability-heartbeats-readiness-liveness.md) | [↑ Back to How We Operate](../README.md) | [Next: Scale & High Availability →](./scale-and-high-availability.md)

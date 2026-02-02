@@ -4,7 +4,7 @@ description: "Strategies for building scalable, redundant systems with stateless
 category: "Operations"
 tags: ["scalability", "high-availability", "redundancy", "horizontal-scaling", "caching", "load-balancing"]
 audience: "Software Engineers, DevOps Engineers"
-version: "1.0"
+version: "1.0.0"
 revision_history:
   - date: "2024-11-11"
     author: "Jeremy K. Johnson"
@@ -140,3 +140,7 @@ This is where caching gets interesting. Instead of caching entire responses, thi
 - [ ] Set up cache invalidation patterns
 - [ ] Monitor cache hit rates
 - [ ] Plan for cache failures (yes, caches can go down too!)
+
+---
+
+[← Previous: Flexible Application Configuration](./flexible-application-configuration.md) | [↑ Back to How We Operate](../README.md) | [Next: Tooling Standards →](./tooling-standards.md)

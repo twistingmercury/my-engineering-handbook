@@ -4,7 +4,7 @@ description: "Trunk-based development strategy, branching guidelines, and code r
 category: "Development Practices"
 tags: ["git", "trunk-based-development", "branching", "pull-requests", "code-review", "ci-cd"]
 audience: "Software Engineers, DevOps Engineers"
-version: "1.0"
+version: "1.0.0"
 revision_history:
   - date: "2025-10-06"
     author: "Jeremy K. Johnson"
@@ -79,3 +79,7 @@ Keep it simple and consistent:
 - **Ready for deployment:** When your branch gets merged to main, the expectation is that the code is ready to go live. At that point, we'll [tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) the codebase with the version number for deployment.
 
 And that's it! Questions? Don't hesitate to reach out to the team.
+
+---
+
+[← Previous: Importance of Documentation](./importance-of-documentation.md) | [↑ Back to How We Operate](../README.md) | [Next: Versioning Our Solutions →](./versioning-our-solutions.md)

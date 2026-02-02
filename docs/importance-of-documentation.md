@@ -4,7 +4,7 @@ description: "Documentation standards, README requirements, and guidelines for k
 category: "Core Principles"
 tags: ["documentation", "README", "CHANGELOG", "runbooks", "confluence", "operational-docs"]
 audience: "Software Engineers, DevOps Engineers"
-version: "1.0"
+version: "1.0.0"
 revision_history:
   - date: "2025-09-30"
     author: "Jeremy K. Johnson"
@@ -116,3 +116,7 @@ Different documentation serves different purposes. Use the right tool for the jo
 - **When to use:** Production services that require operational support
 - **What goes in it:** Troubleshooting guides, emergency procedures, monitoring dashboards
 - **Who it's for:** On-call engineers, operations team, anyone responding to incidents
+
+---
+
+[← Previous: Deliver Solutions that Work](./deliver-solutions-that-work.md) | [↑ Back to How We Operate](../README.md) | [Next: Managing Our Source →](./managing-our-source.md)

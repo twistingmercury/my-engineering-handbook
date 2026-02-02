@@ -5,7 +5,7 @@ category: "Development Practices"
 tags:
   ["docker", "ci-cd", "builds", "deployments", "e2e-tests", "kubernetes", "AKS"]
 audience: "Software Engineers, DevOps Engineers"
-version: "1.0"
+version: "1.0.0"
 revision_history:
   - date: "2025-10-02"
     author: "Jeremy K. Johnson"
@@ -88,3 +88,7 @@ We define "confident" as: 20 consecutive successful production deployments over 
 ### Hosting
 
 You can't talk about deployments without talking briefly about hosting. Our ideal is Kubernetes. We do NOT want to use virtual machines. We also avoid using PaaS services like Azure App Services, or AWS Elastic Beanstalk, though there will be exceptions. We may have some older software deployed on these platforms, but we shouldn't target these hosting options for new apps and services. Containers is the word!
+
+---
+
+[← Previous: Versioning Our Solutions](./versioning-our-solutions.md) | [↑ Back to How We Operate](../README.md) | [Next: Observability: Logging →](./observability-logging.md)
