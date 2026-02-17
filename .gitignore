@@ -45,3 +45,6 @@ out/
 
 # Review tracking (working document)
 docs/REVIEW-ISSUES.md
+
+# MkDocs build output
+site/

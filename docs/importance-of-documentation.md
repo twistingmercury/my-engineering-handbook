@@ -65,7 +65,7 @@ A sentence describing the project. Two at most.
 
 Follow these rules to keep READMEs useful:
 
-- **No emojis** - They look unprofessional and add zero value (checkboxes are fine)
+- **No emojis** - They tend to clutter things up and don't add much for a technical audience (checkboxes are fine)
 - **Working links only** - Test every link before committing. Broken links destroy credibility
 - **Never duplicate docs** - Reference other docs, don't copy-paste them. DRY applies to documentation too
 - **No file tree diagrams** - They're useless and become outdated instantly
@@ -73,7 +73,7 @@ Follow these rules to keep READMEs useful:
 - **No workstation setup instructions** - Include version requirements, not "how to install Node.js"
 - **Write for the reader** - What do they actually need to know?
 - **Most important stuff first** - Lead with usage, bury the implementation details
-- **Be specific** - "Configure the database" is worthless. "Set the DATABASE_URL environment variable" is helpful
+- **Be specific** - "Configure the database" doesn't help anyone. "Set the DATABASE_URL environment variable" is helpful
 - **Show, don't just tell** - Include examples. A code snippet is worth a thousand words
 
 ## Operational Documentation
@@ -119,4 +119,4 @@ Different documentation serves different purposes. Use the right tool for the jo
 
 ---
 
-[← Previous: Deliver Solutions that Work](./deliver-solutions-that-work.md) | [↑ Back to How We Operate](../README.md) | [Next: Managing Our Source →](./managing-our-source.md)
+[← Previous: Deliver Solutions that Work](./deliver-solutions-that-work.md) | [↑ Back to Home](index.md) | [Next: Managing Our Source →](./managing-our-source.md)

@@ -206,4 +206,4 @@ The key is having a clear path for security concerns, even if it's not a formal 
 
 ---
 
-[↑ Back to How We Operate](../README.md) | [Next: Deliver Solutions that Work →](./deliver-solutions-that-work.md)
+[↑ Back to Home](index.md) | [Next: Deliver Solutions that Work →](./deliver-solutions-that-work.md)

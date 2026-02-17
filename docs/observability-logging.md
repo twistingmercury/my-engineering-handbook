@@ -215,4 +215,4 @@ Daily log review takes 15-30 minutes and significantly improves system reliabili
 
 ---
 
-[← Previous: Builds and Deployments](./builds-and-deployments.md) | [↑ Back to How We Operate](../README.md) | [Next: Observability: Distributed Tracing →](./observability-distributed-tracing.md)
+[← Previous: Builds and Deployments](./builds-and-deployments.md) | [↑ Back to Home](index.md) | [Next: Observability: Distributed Tracing →](./observability-distributed-tracing.md)

@@ -57,7 +57,7 @@ These are specific, approved technologies that work everywhere. They're portable
 
 **Envoy** handles service-to-service communication. Use it as a sidecar proxy for traffic management, load balancing, and observability. It's the data plane for Istio, Consul Connect, and other service meshes.
 
-**OpenTelemetry** is the observability standard. It captures traces, metrics, and logs with vendor-neutral APIs and exports them to any backend (Jaeger, Prometheus, Datadog, etc.). See our observability guides for implementation details.
+**OpenTelemetry** is the observability standard. It captures traces, metrics, and logs with vendor-neutral APIs and exports them to any backend (Jaeger, Prometheus, our APM of choice, etc.). See our observability guides for implementation details.
 
 **OPA** enforces policy decisions. Use it for authorization logic, admission control in Kubernetes, and any decision-making that should be separate from application code.
 
@@ -203,7 +203,7 @@ See [Builds and Deployments](./builds-and-deployments.md) for pipeline patterns 
 
 | Capability Required               | Why                                       | Examples                                                                           |
 | --------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------- |
-| **Prometheus-compatible metrics** | Application and infrastructure monitoring | Prometheus, Datadog, Grafana Cloud, Azure Monitor, AWS CloudWatch (with exporters) |
+| **Prometheus-compatible metrics** | Application and infrastructure monitoring | Prometheus, our APM of choice, Grafana Cloud, Azure Monitor, AWS CloudWatch (with exporters) |
 
 **Key requirements:**
 
@@ -348,4 +348,4 @@ Choose patterns over products. Build for portability. Let managed services handl
 
 ---
 
-[← Previous: Scale & High Availability](./scale-and-high-availability.md) | [↑ Back to How We Operate](../README.md)
+[← Previous: Scale & High Availability](./scale-and-high-availability.md) | [↑ Back to Home](index.md)

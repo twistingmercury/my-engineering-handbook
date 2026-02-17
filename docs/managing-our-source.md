@@ -82,4 +82,4 @@ And that's it! Questions? Don't hesitate to reach out to the team.
 
 ---
 
-[← Previous: Importance of Documentation](./importance-of-documentation.md) | [↑ Back to How We Operate](../README.md) | [Next: Versioning Our Solutions →](./versioning-our-solutions.md)
+[← Previous: Importance of Documentation](./importance-of-documentation.md) | [↑ Back to Home](index.md) | [Next: Versioning Our Solutions →](./versioning-our-solutions.md)

@@ -143,4 +143,4 @@ This is where caching gets interesting. Instead of caching entire responses, thi
 
 ---
 
-[← Previous: Flexible Application Configuration](./flexible-application-configuration.md) | [↑ Back to How We Operate](../README.md) | [Next: Tooling Standards →](./tooling-standards.md)
+[← Previous: Flexible Application Configuration](./flexible-application-configuration.md) | [↑ Back to Home](index.md) | [Next: Tooling Standards →](./tooling-standards.md)

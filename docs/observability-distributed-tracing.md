@@ -48,7 +48,7 @@ OpenTelemetry uses two core identifiers to correlate distributed requests:
 - **`trace_id`**: A unique identifier for the entire request journey (32 lowercase hex characters)
 - **`span_id`**: A unique identifier for each operation within that trace (16 lowercase hex characters)
 
-These ARE your correlation IDs. They tie logs, traces, and metrics together across all services involved in a request.
+These are your correlation IDs -- no need to invent separate ones. They tie logs, traces, and metrics together across all services involved in a request.
 
 OpenTelemetry follows the [W3C Trace Context](https://www.w3.org/TR/trace-context/) standard for propagation. Services pass trace context via the `traceparent` HTTP header using the format:
 
@@ -172,4 +172,4 @@ This approach gives you complete observability while keeping costs reasonable. Y
 
 ---
 
-[← Previous: Observability: Logging](./observability-logging.md) | [↑ Back to How We Operate](../README.md) | [Next: Observability: Metrics →](./observability-metrics.md)
+[← Previous: Observability: Logging](./observability-logging.md) | [↑ Back to Home](index.md) | [Next: Observability: Metrics →](./observability-metrics.md)

@@ -241,7 +241,7 @@ Each layer provides different insight. You need all three.
 
 This is the #1 way to kill your metrics system.
 
-**The problem:** Every unique label combination creates a new time series. Add a label with 1,000,000 possible values? Congratulations, you just created 1,000,000 time series.
+**The problem:** Every unique label combination creates a new time series. Add a label with 1,000,000 possible values? That's 1,000,000 time series from a single metric -- and your Prometheus server will not be happy about it.
 
 **The solution:**
 
@@ -286,4 +286,4 @@ High cardinality labels can quickly make metrics expensive. Monitor your time se
 
 ---
 
-[← Previous: Observability: Distributed Tracing](./observability-distributed-tracing.md) | [↑ Back to How We Operate](../README.md) | [Next: Observability: Health Checks →](./observability-heartbeats-readiness-liveness.md)
+[← Previous: Observability: Distributed Tracing](./observability-distributed-tracing.md) | [↑ Back to Home](index.md) | [Next: Observability: Health Checks →](./observability-heartbeats-readiness-liveness.md)

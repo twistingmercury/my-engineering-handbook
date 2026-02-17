@@ -111,4 +111,4 @@ This is a manual process, but it doesn't take long:
 
 ---
 
-[← Previous: Security in Development](./security-in-development.md) | [↑ Back to How We Operate](../README.md) | [Next: Importance of Documentation →](./importance-of-documentation.md)
+[← Previous: Security in Development](./security-in-development.md) | [↑ Back to Home](index.md) | [Next: Importance of Documentation →](./importance-of-documentation.md)

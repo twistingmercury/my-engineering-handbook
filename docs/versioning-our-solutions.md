@@ -93,4 +93,4 @@ All our Docker images should include these labels based on the [OCI Image Format
 
 ---
 
-[← Previous: Managing Our Source](./managing-our-source.md) | [↑ Back to How We Operate](../README.md) | [Next: Builds and Deployments →](./builds-and-deployments.md)
+[← Previous: Managing Our Source](./managing-our-source.md) | [↑ Back to Home](index.md) | [Next: Builds and Deployments →](./builds-and-deployments.md)

@@ -138,4 +138,4 @@ This approach ensures configuration problems are caught immediately at startup r
 
 ---
 
-[← Previous: Observability: Health Checks](./observability-heartbeats-readiness-liveness.md) | [↑ Back to How We Operate](../README.md) | [Next: Scale & High Availability →](./scale-and-high-availability.md)
+[← Previous: Observability: Health Checks](./observability-heartbeats-readiness-liveness.md) | [↑ Back to Home](index.md) | [Next: Scale & High Availability →](./scale-and-high-availability.md)

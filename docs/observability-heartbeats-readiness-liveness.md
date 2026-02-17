@@ -147,4 +147,4 @@ Apply these thresholds when checking memory, CPU, disk, database connections, an
 
 ---
 
-[← Previous: Observability: Metrics](./observability-metrics.md) | [↑ Back to How We Operate](../README.md) | [Next: Flexible Application Configuration →](./flexible-application-configuration.md)
+[← Previous: Observability: Metrics](./observability-metrics.md) | [↑ Back to Home](index.md) | [Next: Flexible Application Configuration →](./flexible-application-configuration.md)
